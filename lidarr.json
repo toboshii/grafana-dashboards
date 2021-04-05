@@ -16,14 +16,13 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 274,
-  "iteration": 1616100004925,
+  "iteration": 1617623069147,
   "links": [],
   "panels": [
     {
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -87,7 +86,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "lidarr_system_status{job=\"$instance\"}",
@@ -107,7 +106,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -154,7 +152,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "lidarr_artists_total{job=\"$instance\"}",
@@ -183,7 +181,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -230,7 +227,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "lidarr_queue_total{job=\"$instance\"}",
@@ -251,7 +248,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -298,7 +294,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "lidarr_system_health_issues{job=\"$instance\"}",
@@ -319,7 +315,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -366,7 +361,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "lidarr_artists_filesize_bytes{job=\"$instance\"}",
@@ -387,7 +382,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -434,7 +428,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "lidarr_albums_total{job=\"$instance\"}",
@@ -462,7 +456,7 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
+          "decimals": 0,
           "mappings": [
             {
               "from": "",
@@ -509,10 +503,10 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
-          "expr": "sum(increase(lidarr_movie_download_total{job=\"$instance\"}[30d]))",
+          "expr": "sum(increase(lidarr_songs_downloaded_total{job=\"$instance\"}[30d]))",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -529,7 +523,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -576,7 +569,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "lidarr_songs_total{job=\"$instance\"}",
@@ -605,7 +598,7 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
+          "decimals": 0,
           "mappings": [
             {
               "from": "",
@@ -652,10 +645,10 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
-          "expr": "sum(increase(lidarr_movie_download_total{job=\"$instance\"}[7d]))",
+          "expr": "sum(increase(lidarr_songs_downloaded_total{job=\"$instance\"}[7d]))",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -675,7 +668,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "links": [],
           "mappings": [],
           "thresholds": {
@@ -713,7 +705,7 @@
           "valueSize": 14
         }
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sort_desc(sum(lidarr_songs_quality_total{job=\"$instance\"}) by (quality))",
@@ -736,7 +728,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "links": [],
           "mappings": [],
           "thresholds": {
@@ -774,7 +765,7 @@
           "valueSize": 10
         }
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sort_desc(sum(lidarr_artists_genres_total{job=\"$instance\"} > 10) by (genre))",
@@ -793,9 +784,7 @@
     {
       "datasource": "Loki",
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "gridPos": {
@@ -806,6 +795,7 @@
       },
       "id": 15,
       "options": {
+        "dedupStrategy": "none",
         "showLabels": false,
         "showTime": false,
         "sortOrder": "Descending",
@@ -876,5 +866,5 @@
   "timezone": "",
   "title": "Lidarr",
   "uid": "A8iPssjZs",
-  "version": 8
+  "version": 9
 }
