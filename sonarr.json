@@ -16,14 +16,13 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 273,
-  "iteration": 1616100206459,
+  "iteration": 1617623061759,
   "links": [],
   "panels": [
     {
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -87,7 +86,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sonarr_system_status{job=\"$instance\"}",
@@ -107,7 +106,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -153,7 +151,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sonarr_episode_missing_total{job=\"$instance\"}",
@@ -174,7 +172,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -221,7 +218,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sonarr_queue_total{job=\"$instance\"}",
@@ -242,7 +239,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -289,7 +285,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sonarr_system_health_issues{job=\"$instance\"}",
@@ -310,7 +306,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -357,7 +352,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sonarr_series_total{job=\"$instance\"}",
@@ -378,7 +373,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -425,7 +419,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sonarr_series_filesize_bytes{job=\"$instance\"}",
@@ -446,7 +440,7 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
+          "decimals": 0,
           "mappings": [
             {
               "from": "",
@@ -493,7 +487,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sum(increase(sonarr_episode_downloaded_total{job=\"$instance\"}[30d]))",
@@ -513,7 +507,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -560,7 +553,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sonarr_series_monitored_total{job=\"$instance\"}",
@@ -581,7 +574,7 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
+          "decimals": 0,
           "mappings": [
             {
               "from": "",
@@ -628,7 +621,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sum(increase(sonarr_episode_downloaded_total{job=\"$instance\"}[7d]))",
@@ -651,7 +644,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "links": [],
           "mappings": [],
           "thresholds": {
@@ -689,7 +681,7 @@
           "valueSize": 10
         }
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sort_desc(sum(sonarr_episode_quality_total{job=\"$instance\"}) by (quality))",
@@ -708,9 +700,7 @@
     {
       "datasource": "Loki",
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "gridPos": {
@@ -721,6 +711,7 @@
       },
       "id": 15,
       "options": {
+        "dedupStrategy": "none",
         "showLabels": false,
         "showTime": false,
         "sortOrder": "Descending",
@@ -791,5 +782,5 @@
   "timezone": "",
   "title": "Sonarr",
   "uid": "A8iPssjZd",
-  "version": 6
+  "version": 8
 }
