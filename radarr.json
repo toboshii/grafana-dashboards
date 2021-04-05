@@ -16,14 +16,13 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 272,
-  "iteration": 1616100155953,
+  "iteration": 1617623062689,
   "links": [],
   "panels": [
     {
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -87,7 +86,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "radarr_system_status{job=\"$instance\"}",
@@ -107,7 +106,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -153,7 +151,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "radarr_movie_missing_total{job=\"$instance\"}",
@@ -174,7 +172,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -221,7 +218,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "radarr_queue_total{job=\"$instance\"}",
@@ -242,7 +239,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -289,7 +285,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "radarr_system_health_issues{job=\"$instance\"}",
@@ -310,7 +306,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -357,7 +352,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "radarr_movie_total{job=\"$instance\"}",
@@ -378,7 +373,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -424,7 +418,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "radarr_movie_wanted_total{job=\"$instance\"}",
@@ -444,7 +438,7 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
+          "decimals": 0,
           "mappings": [
             {
               "from": "",
@@ -491,10 +485,10 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
-          "expr": "sum(increase(radarr_movie_download_total{job=\"$instance\"}[30d]))",
+          "expr": "sum(increase(radarr_movie_downloaded_total{job=\"$instance\"}[30d]))",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -511,7 +505,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -558,7 +551,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "radarr_movie_monitored_total{job=\"$instance\"}",
@@ -579,7 +572,6 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
               "from": "",
@@ -626,7 +618,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "radarr_movie_filesize_total{job=\"$instance\"}",
@@ -647,7 +639,7 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
+          "decimals": 0,
           "mappings": [
             {
               "from": "",
@@ -694,10 +686,10 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
-          "expr": "sum(increase(radarr_movie_download_total{job=\"$instance\"}[7d]))",
+          "expr": "sum(increase(radarr_movie_downloaded_total{job=\"$instance\"}[7d]))",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -717,7 +709,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "links": [],
           "mappings": [],
           "thresholds": {
@@ -755,7 +746,7 @@
           "valueSize": 10
         }
       },
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.5.2",
       "targets": [
         {
           "expr": "sort_desc(sum(radarr_movie_quality_total{job=\"$instance\"}) by (quality))",
@@ -774,9 +765,7 @@
     {
       "datasource": "Loki",
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "gridPos": {
@@ -787,6 +776,7 @@
       },
       "id": 15,
       "options": {
+        "dedupStrategy": "none",
         "showLabels": false,
         "showTime": false,
         "sortOrder": "Descending",
@@ -857,5 +847,5 @@
   "timezone": "",
   "title": "Radarr",
   "uid": "A8iPssjZk",
-  "version": 16
+  "version": 18
 }
